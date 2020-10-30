@@ -6,6 +6,11 @@ export const environment = {
   production: false
 };
 
+export const KEY_PUBLIC = 'a0e9170944529ad94ef26f5e5bd6c0b4';
+export const HASH = 'B9FFC290E8AF470961C5566A0559DAB1';
+export const URL_API = `https://gateway.marvel.com:443/v1/public/characters?apikey=${KEY_PUBLIC}&hash=${HASH}`;
+
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

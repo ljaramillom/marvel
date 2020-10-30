@@ -8,6 +8,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { CharactersComponent } from './components/characters/characters.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { CharactersComponent } from './components/characters/characters.componen
     FooterComponent,
     HomeComponent,
     FavoritesComponent,
-    CharactersComponent
+    CharactersComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
