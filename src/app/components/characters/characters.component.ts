@@ -17,6 +17,7 @@ export class CharactersComponent implements OnInit {
     this.getCharacteres();
   }
 
+  // Petición al servicio para obtener el listado de todos los personajes
   getCharacteres() {
     this.characterService.getAllCharacters().subscribe(
       (resp) => {

@@ -1,0 +1,21 @@
+// .cards {
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: stretch;
+// }
+#card-container {
+    height: 450px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    .profile-img {
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+}
