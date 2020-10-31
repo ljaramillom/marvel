@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { CharactersComponent } from './components/characters/characters.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TextLengthPipe } from './shared/pipe/text-length.pipe';
+import { CharacterComponent } from './components/character/character/character.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FavoritesComponent,
     CharactersComponent,
+    TextLengthPipe,
+    CharacterComponent,
   ],
   imports: [
     BrowserModule,

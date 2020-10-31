@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { URL_API } from '../../../environments/environment';
 
 @Injectable({
@@ -19,7 +18,6 @@ export class CharacterService {
       this.http.get(URL_API).subscribe(
         (resp: any) => {
           this.response = resp.data.results;
-          console.log(this.response);
           observer.next(this.response);
         },
         (error) => {
