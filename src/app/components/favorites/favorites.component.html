@@ -5,9 +5,19 @@
                 <img src="../../../assets/icons/favourites.png" alt="Characters" />
             </div>
             <div class="col-10 text-left px-0 mx-0">
-                <h2>My favorites</h2>
+                <h2>My favourites</h2>
             </div>
         </div>
-        <p>Contenido</p>
+        <div class="row">
+            <div class="col-12 d-flex flex-column pb-4" *ngFor="let character of characteres;  let i=index">
+                <div *ngIf="i <= 2" class="card border-0 mx-5">
+                    <img class="img-fluid" src="{{character?.thumbnail.path}}.{{character?.thumbnail.extension}} " alt="{{character.name}}">
+
+                    <div class="card-body ">
+                        <h5 class="card-title text-center">{{character.name}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

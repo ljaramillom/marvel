@@ -1,19 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { CharacterService } from '../../services/character/character.service';
-import { Character} from './models/character.model';
+import { Character } from '../../shared/models/character.model';
+
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.scss']
+  styleUrls: ['./characters.component.scss'],
 })
 export class CharactersComponent implements OnInit {
 
   characteres: Character;
+  lorem: string;
+  p: any;
 
-  constructor(public characterService: CharacterService ) { }
+  constructor(public characterService: CharacterService) {}
 
   ngOnInit() {
     this.getCharacteres();
+    this.lorem = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore mollitia dolorum optio dolore doloribus consequuntur.';
   }
 
   // Petición al servicio para obtener el listado de todos los personajes
@@ -21,11 +25,11 @@ export class CharactersComponent implements OnInit {
     this.characterService.getAllCharacters().subscribe(
       (resp) => {
         this.characteres = resp;
-        console.log('resp', resp);
+        console.log('resp characteres', resp);
       },
       (error) => {
         console.log(error);
-      });
+      }
+    );
   }
-
 }
