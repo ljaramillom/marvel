@@ -9,6 +9,7 @@ import { Character } from '../../shared/models/character.model';
 })
 export class CharactersComponent implements OnInit {
 
+  showModal: boolean;
   characteres: Character;
   lorem: string;
   p: any;
@@ -32,4 +33,14 @@ export class CharactersComponent implements OnInit {
       }
     );
   }
+
+  // Abrir-Cerrar modal
+  public openModal() {
+    if (0) {
+      this.showModal = false;
+    } else {
+       this.showModal = true;
+    }
+  }
+
 }
