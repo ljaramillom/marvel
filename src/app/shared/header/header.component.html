@@ -9,7 +9,7 @@
             <div class="col-8 pt-3">
                 <form class="form-group-lg">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control form-control-lg border-right-0 border" placeholder="Search character..">
+                        <input [(ngModel)]="query" (keyup)=queryCharacter() type="text" name="query" class="form-control form-control-lg border-right-0 border" placeholder="Search character..">
                         <div class="input-group-append">
                             <span class="input-group-text"><img src="../../../assets/icons/search.png" alt="Search"/></span>
                         </div>

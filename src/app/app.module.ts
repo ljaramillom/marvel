@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TextLengthPipe } from './shared/pipe/text-length.pipe';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgxPaginationModule,
     HttpClientModule
   ],
