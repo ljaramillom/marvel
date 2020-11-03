@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Character } from '../../shared/models/character.model';
@@ -34,13 +34,25 @@ export class CharacterService {
   }
 
   // Método para buscar personaje por nombre
+  // getCharacter(value: string) {
+  //   const URL = `${this.URL_API}?name=${value}&apikey=${this.KEY_PUBLIC}&hash=${this.HASH}`;
+  //   return this.http.get(URL).pipe(
+  //     map((resp: any) => {
+  //       console.log(resp);
+  //       return resp;
+  //     })
+  //   );
+  // }
   getCharacter(value: string) {
+    console.log('value', value);
     const URL = `${this.URL_API}?name=${value}&apikey=${this.KEY_PUBLIC}&hash=${this.HASH}`;
-    return this.http.get(URL).pipe(
-      map((resp: any) => {
-        console.log(resp);
-        return resp;
-      })
-    );
+    return this.http.get<any>(URL)
+      .pipe(
+        map((resp: any) => {
+          console.log('resp service', resp);
+          console.log('results', resp.data.results);
+          this.response = resp.data.results;
+        })
+      );
   }
 }

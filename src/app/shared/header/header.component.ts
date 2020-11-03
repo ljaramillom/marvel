@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CharacterService } from '../../services/character/character.service';
 
 @Component({
@@ -8,16 +9,31 @@ import { CharacterService } from '../../services/character/character.service';
 })
 export class HeaderComponent implements OnInit {
 
-  query: string;
+  queryForm: FormGroup;
 
-  constructor(public characterService: CharacterService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    public characterService: CharacterService) { }
 
   ngOnInit() {
+    this.createForm();
   }
 
-  queryCharacter() {
-    if (this.query) {
-      this.characterService.getCharacter(this.query).subscribe();
+  get query() {
+    return this.queryForm.get('query');
+  }
+
+  createForm() {
+    this.queryForm = this.formBuilder.group({
+      query: ['', [Validators.minLength(3)]],
+    });
+  }
+
+  submit() {
+    console.log('value', this.queryForm.get('query').value);
+    if (this.queryForm.valid) {
+      this.characterService.getCharacter(this.queryForm.get('query').value).subscribe(
+      );
     }
   }
 
