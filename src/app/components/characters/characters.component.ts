@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Subscription, Observable } from 'rxjs';
 import { CharacterService } from '../../services/character/character.service';
 import { Character } from '../../shared/models/character.model';
 
@@ -9,38 +10,21 @@ import { Character } from '../../shared/models/character.model';
 })
 export class CharactersComponent implements OnInit {
 
-  showModal: boolean;
   characteres: Character;
-  lorem: string;
   p: any;
 
   constructor(public characterService: CharacterService) {}
 
   ngOnInit() {
     this.getCharacteres();
-    this.lorem = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore mollitia dolorum optio dolore doloribus consequuntur.';
-  }
+    this.characterService.filter$.subscribe((newFilter: any) => {
+      this.characteres = newFilter;
+    });
+   }
 
-  // Petición al servicio para obtener el listado de todos los personajes
+  // Petición al servicio para obtener personajes
   getCharacteres() {
-    this.characterService.getAllCharacters().subscribe(
-      (resp) => {
-        this.characteres = resp;
-        console.log('resp characteres', resp);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-
-  // Abrir-Cerrar modal
-  public openModal() {
-    if (0) {
-      this.showModal = false;
-    } else {
-       this.showModal = true;
-    }
+    this.characterService.getAllCharacters();
   }
 
 }

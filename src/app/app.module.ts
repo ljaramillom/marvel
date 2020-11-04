@@ -12,6 +12,7 @@ import { TextLengthPipe } from './shared/pipe/text-length.pipe';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CharacterComponent } from './components/character/character/character.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     FavoritesComponent,
+    CharacterComponent,
     CharactersComponent,
     TextLengthPipe,
   ],

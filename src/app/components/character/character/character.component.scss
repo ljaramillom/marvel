@@ -1,0 +1,109 @@
+.character-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-container {
+    height: 450px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    .profile-img img {
+        height: 230px;
+        width: 230px;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    button {
+        padding: 4px 8px;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        border-radius: 0;
+        border-color: transparent;
+        background-color: #ec292e;
+    }
+}
+
+.related-comics {
+    display: flex;
+    flex-direction: column;
+    h5 {
+        color: gray;
+    }
+}
+
+.items-comics {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    height: 100%;
+}
+
+.column {
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .column {
+        flex-basis: 50%;
+        height: 50%;
+    }
+}
+
+.column {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.modal-footer {
+    padding: 0 !important;
+}
+
+.modal-footer button {
+    flex: 0 1 50%;
+    max-width: none;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.btn-add {
+    background-color: #f0f0f0;
+    color: #3d3332;
+}
+
+.btn-add:hover {
+    background-color: #322827;
+    color: #ec292e;
+}
+
+.btn-buy {
+    background-color: #dcdcdc;
+    color: #ec292e;
+}

@@ -1,0 +1,62 @@
+<div class="character-card">
+    <div id="card-container">
+        <div class="profile-img">
+            <img src="{{character?.thumbnail.path}}.{{character?.thumbnail.extension}} " alt="{{character.name}}">
+        </div>
+        <div class="container">
+            <div class="column">
+            </div>
+            <div class="column">
+                <div class="description">
+                    <h5>{{character.name | textLength: 15}}</h5>
+                    <p>{{ character.description ? (character.description | textLength) : 'No description'}}</p>
+                    <button type="button" class="btn btn-sm" data-toggle="modal" (click)="openModal()" data-target="#modalCharacter">
+                        View more
+                      </button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="related-comics">
+                    <h5>Related comics</h5>
+                    <p>{{lorem | textLength: 32}}</p>
+                    <p>{{lorem | textLength: 32}}</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="items-comics">
+                    <p>{{lorem | textLength: 32}}</p>
+                    <p>{{lorem | textLength: 32}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="showModal" class="modal fade" id="modalCharacter">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="../../../assets/icons/btn-close.png"/></span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <img src="../../../assets/img/marvel.png" alt="" width="200" class="img-fluid m-x-auto">
+                    </div>
+
+                    <div class="col-md-8">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis non error, reprehenderit iusto illo quo? Molestiae, sed blanditiis officiis qui corporis odit dignissimos numquam, nulla quo commodi, alias in maxime. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Facilis non error, reprehenderit iusto illo quo? Molestiae, sed blanditiis officiis qui corporis odit dignissimos numquam, nulla quo commodi, alias in maxime.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-add btn-lg mr-auto"><img src="../../../../assets/icons/btn-favourites-default.png" /> Added to favourites</button>
+                <button type="button" class="btn btn-buy btn-lg" data-dismiss="modal"><img src="../../../../assets/icons/shopping-cart-primary.png" /> Buy for $3.99</button>
+            </div>
+        </div>
+    </div>
+</div>

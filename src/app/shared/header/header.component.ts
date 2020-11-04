@@ -25,15 +25,13 @@ export class HeaderComponent implements OnInit {
 
   createForm() {
     this.queryForm = this.formBuilder.group({
-      query: ['', [Validators.minLength(3)]],
+      query: [''],
     });
   }
 
   submit() {
-    console.log('value', this.queryForm.get('query').value);
     if (this.queryForm.valid) {
-      this.characterService.getCharacter(this.queryForm.get('query').value).subscribe(
-      );
+      this.characterService.getCharacter(this.queryForm.get('query').value);
     }
   }
 
