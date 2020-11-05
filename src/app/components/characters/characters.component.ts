@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CharacterService } from '../../services/character/character.service';
-import { Character } from '../../shared/models/character.model';
 
 @Component({
   selector: 'app-characters',
@@ -9,7 +8,7 @@ import { Character } from '../../shared/models/character.model';
 })
 export class CharactersComponent implements OnInit {
 
-  characteres: Character;
+  characteres: any;
   p: any;
 
   constructor(public characterService: CharacterService) {}

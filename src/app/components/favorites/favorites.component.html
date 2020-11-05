@@ -11,8 +11,7 @@
         <div class="row">
             <div class="col-12 d-flex flex-column pb-4 " *ngFor="let comic of favorites">
                 <div class="card border-0 mx-5 ">
-                    <img class="img-delete" src="../../../assets/icons/btn-delete.png">
-                    <img class="img-fluid img-comic" src="{{comic.images[0].path}}.{{comic.images[0].extension}} " alt="{{comic.title}}">
+                    <img class="img-fluid" src="{{comic.images[0].path}}.{{comic.images[0].extension}} " alt="{{comic.title}}">
                     <div class="card-body">
                         <h5 class="card-title text-center">{{comic.title}}</h5>
                     </div>

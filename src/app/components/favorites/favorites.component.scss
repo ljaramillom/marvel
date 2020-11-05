@@ -1,13 +1,6 @@
 @import '../../../assets/design-system/_main.scss';
-.card .img-comic {
+.card img {
     position: relative;
     height: 20rem;
     width: auto;
-}
-
-.img-delete {
-    position: absolute;
-    padding-left: 196px;
-    cursor: pointer;
-    z-index: 1;
 }
