@@ -1,5 +1,4 @@
-import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
-import { Subscription, Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { CharacterService } from '../../services/character/character.service';
 import { Character } from '../../shared/models/character.model';
 

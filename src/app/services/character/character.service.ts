@@ -7,8 +7,8 @@ import { Observable, Subject } from 'rxjs';
 })
 export class CharacterService {
 
-  KEY_PUBLIC = 'a0e9170944529ad94ef26f5e5bd6c0b4';
-  HASH = 'B9FFC290E8AF470961C5566A0559DAB1';
+  KEY_PUBLIC = '745fbdaefc1b25927cbd8c6221c62570';
+  HASH = '745FA700C4E84053B120BAFD7A283E82';
   URL_API = `https://gateway.marvel.com:443/v1/public/characters`;
   filter$: Observable<any>;
   private filterSubject: Subject<any>;

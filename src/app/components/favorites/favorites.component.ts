@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CharacterService } from '../../services/character/character.service';
-import { Character } from '../../shared/models/character.model';
+import { Comic } from '../../shared/models/comic.model';
+import { FavoriteService } from '../../services/favorite/favorite.service';
 
 @Component({
   selector: 'app-favorites',
@@ -9,10 +9,20 @@ import { Character } from '../../shared/models/character.model';
 })
 export class FavoritesComponent implements OnInit {
 
+  favorites: Comic;
 
-  constructor() { }
+  constructor(public favoriteService: FavoriteService) { }
 
   ngOnInit() {
+    this.getFavorites();
+    this.favoriteService.favoriteId$.subscribe((data: any) => {
+      this.favorites = data;
+    });
+  }
+
+  // Petición al servicio para obtener personajes
+  getFavorites() {
+    this.favoriteService.getFavorites();
   }
 
 }

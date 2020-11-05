@@ -1,0 +1,64 @@
+<div class="character-card">
+    <div id="card-container">
+        <div class="profile-img">
+            <img src="{{character?.thumbnail.path}}.{{character?.thumbnail.extension}} " alt="{{character.name}}">
+        </div>
+        <div class="container">
+            <div class="column">
+            </div>
+            <div class="column">
+                <div class="description">
+                    <h5>{{character.name | textLength: 15}}</h5>
+                    <p>{{ character.description ? (character.description | textLength) : 'No description'}}</p>
+                    <a href="{{character.urls[0].url}}" target="_blank" class="btn btn-sm btn-danger">View more</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="related-comics">
+                    <h5>Related comics</h5>
+                    <a href="#" data-toggle="modal" (click)="openModal(character.comics.items[0].resourceURI)" data-target="#modalCharacter">{{ character.comics.items[0] ? (character.comics.items[0]?.name | textLength: 32) : ''}}</a>
+                    <a href="#" data-toggle="modal" (click)="openModal(character.comics.items[1].resourceURI)" data-target="#modalCharacter">{{ character.comics.items[1] ? (character.comics.items[1]?.name | textLength: 32) : ''}}</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="items-comics">
+                    <a href="#" data-toggle="modal" (click)="openModal(character.comics.items[2].resourceURI)" data-target="#modalCharacter">{{ character.comics.items[2] ? (character.comics.items[2]?.name | textLength: 32) : ''}}</a>
+                    <a href="#" data-toggle="modal" (click)="openModal(character.comics.items[3].resourceURI)" data-target="#modalCharacter">{{ character.comics.items[3] ? (character.comics.items[3]?.name | textLength: 32) : ''}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="showModal" class="modal fade" id="modalCharacter">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><img src="../../../assets/icons/btn-close.png" /></span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{comics[0].images[0].path}}.{{comics[0].images[0].extension}}" alt="" width="200" class="img-fluid m-x-auto">
+                    </div>
+
+                    <div class="col-md-8">
+                        <h4>{{comics[0].title ? (comics[0].title | uppercase) : 'TITLE NOT AVAILABLE'}} </h4>
+                        <div class="text-justify">
+                            <p>{{comics[0].description ? (comics[0].description | titlecase) : 'Description not available'}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-add btn-lg mr-auto"><img
+            src="../../../../assets/icons/btn-favourites-default.png" /> Added to favourites</button>
+                <button type="button" class="btn btn-buy btn-lg" data-dismiss="modal"><img
+            src="../../../../assets/icons/shopping-cart-primary.png" /> Buy for
+          ${{comics[0].prices[0].price ? comics[0].prices[0].price : '0'}}</button>
+            </div>
+        </div>
+    </div>
+</div>
