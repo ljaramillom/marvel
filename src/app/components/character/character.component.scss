@@ -12,7 +12,6 @@
     border-radius: 5px;
     background: white;
     position: relative;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     .profile-img img {
         height: 230px;
         width: 230px;
@@ -55,7 +54,6 @@
     a {
         color: $color-red;
         padding-bottom: 10px;
-        ;
     }
 }
 
@@ -111,4 +109,18 @@
 .btn-buy {
     background-color: $color-gray;
     color: $color-red;
+}
+
+.add-img {
+    div {
+        width: 40px;
+        height: 40px;
+        background: url(../../../assets/icons/btn-favourites-default.png) no-repeat;
+    }
+}
+
+.add-img:hover {
+    div {
+        background: url(../../../assets/icons/btn-favourites-primary.png) no-repeat;
+    }
 }

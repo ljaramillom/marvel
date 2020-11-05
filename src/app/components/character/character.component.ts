@@ -12,10 +12,13 @@ export class CharacterComponent implements OnInit {
   @Input()character: Character;
   showModal: boolean;
   comics: any;
+  textButton: string;
 
   constructor(public comicService: ComicService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.textButton = 'ADD TO FAVOURITES';
+  }
 
   // Petición al servicio para obtener comic por Id
   getComic(charId: number) {
@@ -35,6 +38,10 @@ export class CharacterComponent implements OnInit {
     } else {
        this.showModal = true;
     }
+  }
+
+  public changeText(text: string) {
+    this.textButton = text;
   }
 
 }

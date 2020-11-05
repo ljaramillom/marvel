@@ -53,8 +53,7 @@
                 </div>
             </div>
             <div class="modal-footer border-0">
-                <button type="button" class="btn btn-add btn-lg mr-auto"><img
-            src="../../../../assets/icons/btn-favourites-default.png" /> <b> ADDED TO FAVOURITES</b></button>
+                <button (mouseout)="changeText('ADD TO FAVOURITES')" (mouseover)="changeText('ADDED TO FAVOURITES')" type="button" class="btn btn-add btn-lg mr-auto d-flex justify-content-center align-items-center add-img"><div class="mr-2"></div><b> {{textButton}}</b></button>
                 <button type="button" class="btn btn-buy btn-lg" data-dismiss="modal"><img
             src="../../../../assets/icons/shopping-cart-primary.png" /> <b> BUY FOR
                 ${{comics[0].prices[0].price ? comics[0].prices[0].price : '0'}}</b></button>
