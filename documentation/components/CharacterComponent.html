@@ -1,0 +1,994 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>app-marvel documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/laravel.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">app-marvel documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CharacterComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/character/character.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-character</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./character.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./character.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#comics">comics</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#comicService">comicService</a>
+                            </li>
+                            <li>
+                                <a href="#showModal">showModal</a>
+                            </li>
+                            <li>
+                                <a href="#textButton">textButton</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#changeText">changeText</a>
+                            </li>
+                            <li>
+                                <a href="#getComic">getComic</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#openModal">openModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#character">character</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(comicService: <a href="../injectables/ComicService.html">ComicService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/character/character.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>comicService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ComicService.html" target="_self" >ComicService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="character"></a>
+                        <b>character</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Character.html" target="_self" >Character</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/character/character.component.ts:12</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeText"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            changeText
+                        </b>
+                        <a href="#changeText"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>changeText(text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/components/character/character.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>text</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getComic"></a>
+                    <span class="name">
+                        <b>
+                            getComic
+                        </b>
+                        <a href="#getComic"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getComic(charId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/components/character/character.component.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>charId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/app/components/character/character.component.ts:19</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openModal"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            openModal
+                        </b>
+                        <a href="#openModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openModal(url)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/components/character/character.component.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>url</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="comics"></a>
+                        <span class="name">
+                            <b>
+                            comics</b>
+                            <a href="#comics"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/character/character.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="comicService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            comicService</b>
+                            <a href="#comicService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/ComicService.html" target="_self" >ComicService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/character/character.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showModal"></a>
+                        <span class="name">
+                            <b>
+                            showModal</b>
+                            <a href="#showModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/character/character.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="textButton"></a>
+                        <span class="name">
+                            <b>
+                            textButton</b>
+                            <a href="#textButton"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/character/character.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
+import { Character } from &#x27;../../shared/models/character.model&#x27;;
+import { ComicService } from &#x27;../../services/comic/comic.service&#x27;;
+
+@Component({
+  selector: &#x27;app-character&#x27;,
+  templateUrl: &#x27;./character.component.html&#x27;,
+  styleUrls: [&#x27;./character.component.scss&#x27;]
+})
+export class CharacterComponent implements OnInit {
+
+  @Input()character: Character;
+  showModal: boolean;
+  comics: any;
+  textButton: string;
+
+  constructor(public comicService: ComicService) { }
+
+  ngOnInit() {
+    this.textButton &#x3D; &#x27;ADD TO FAVOURITES&#x27;;
+  }
+
+  // Petición al servicio para obtener comic por Id
+  getComic(charId: number) {
+    this.comics &#x3D; this.comicService.getComic(charId);
+    this.comicService.comicId$.subscribe((comics: any) &#x3D;&gt; {
+      this.comics &#x3D; comics;
+    });
+  }
+
+   // Abrir-Cerrar modal
+   public openModal(url) {
+    const arrayUrl &#x3D; url.split(&#x27;/&#x27;);
+    const comicId &#x3D; parseInt(arrayUrl[arrayUrl.length - 1]);
+    this.getComic(comicId);
+    if (0) {
+      this.showModal &#x3D; false;
+    } else {
+       this.showModal &#x3D; true;
+    }
+  }
+
+  public changeText(text: string) {
+    this.textButton &#x3D; text;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;character-card&quot;&gt;
+    &lt;div id&#x3D;&quot;card-container&quot;&gt;
+        &lt;div class&#x3D;&quot;profile-img&quot;&gt;
+            &lt;img src&#x3D;&quot;{{character?.thumbnail.path}}.{{character?.thumbnail.extension}} &quot; alt&#x3D;&quot;{{character.name}}&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;container&quot;&gt;
+            &lt;div class&#x3D;&quot;column&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;column&quot;&gt;
+                &lt;div class&#x3D;&quot;description&quot;&gt;
+                    &lt;h5&gt;{{character.name | textLength: 15 | uppercase}}&lt;/h5&gt;
+                    &lt;p&gt;{{ character.description ? (character.description | textLength) : &#x27;No description&#x27;}}&lt;/p&gt;
+                    &lt;a href&#x3D;&quot;{{character.urls[0].url}}&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;btn btn-sm btn-danger&quot;&gt;VIEW MORE&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;column&quot;&gt;
+                &lt;div class&#x3D;&quot;related-comics&quot;&gt;
+                    &lt;h5&gt;Related comics&lt;/h5&gt;
+                    &lt;a href&#x3D;&quot;#&quot; data-toggle&#x3D;&quot;modal&quot; (click)&#x3D;&quot;openModal(character.comics.items[0].resourceURI)&quot; data-target&#x3D;&quot;#modalCharacter&quot;&gt;{{ character.comics.items[0] ? (character.comics.items[0]?.name | textLength: 32) : &#x27;&#x27;}}&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;#&quot; data-toggle&#x3D;&quot;modal&quot; (click)&#x3D;&quot;openModal(character.comics.items[1].resourceURI)&quot; data-target&#x3D;&quot;#modalCharacter&quot;&gt;{{ character.comics.items[1] ? (character.comics.items[1]?.name | textLength: 32) : &#x27;&#x27;}}&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;column&quot;&gt;
+                &lt;div class&#x3D;&quot;items-comics&quot;&gt;
+                    &lt;a href&#x3D;&quot;#&quot; data-toggle&#x3D;&quot;modal&quot; (click)&#x3D;&quot;openModal(character.comics.items[2].resourceURI)&quot; data-target&#x3D;&quot;#modalCharacter&quot;&gt;{{ character.comics.items[2] ? (character.comics.items[2]?.name | textLength: 32) : &#x27;&#x27;}}&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;#&quot; data-toggle&#x3D;&quot;modal&quot; (click)&#x3D;&quot;openModal(character.comics.items[3].resourceURI)&quot; data-target&#x3D;&quot;#modalCharacter&quot;&gt;{{ character.comics.items[3] ? (character.comics.items[3]?.name | textLength: 32) : &#x27;&#x27;}}&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div *ngIf&#x3D;&quot;showModal&quot; class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;modalCharacter&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-header border-0&quot;&gt;
+                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+          &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&lt;img src&#x3D;&quot;../../../assets/icons/btn-close.png&quot; /&gt;&lt;/span&gt;
+        &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+                        &lt;img src&#x3D;&quot;{{comics[0].images[0].path}}.{{comics[0].images[0].extension}}&quot; alt&#x3D;&quot;&quot; width&#x3D;&quot;200&quot; class&#x3D;&quot;img-fluid m-x-auto&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+                        &lt;h4&gt;{{comics[0].title ? (comics[0].title | uppercase) : &#x27;TITLE NOT AVAILABLE&#x27;}} &lt;/h4&gt;
+                        &lt;div class&#x3D;&quot;text-justify&quot;&gt;
+                            &lt;p&gt;{{comics[0].description ? (comics[0].description | titlecase) : &#x27;Description not available&#x27;}}&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;modal-footer border-0&quot;&gt;
+                &lt;button (mouseout)&#x3D;&quot;changeText(&#x27;ADD TO FAVOURITES&#x27;)&quot; (mouseover)&#x3D;&quot;changeText(&#x27;ADDED TO FAVOURITES&#x27;)&quot; type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-add btn-lg mr-auto d-flex justify-content-center align-items-center add-img&quot;&gt;&lt;div class&#x3D;&quot;mr-2&quot;&gt;&lt;/div&gt;&lt;b&gt; {{textButton}}&lt;/b&gt;&lt;/button&gt;
+                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-buy btn-lg&quot; data-dismiss&#x3D;&quot;modal&quot;&gt;&lt;img
+            src&#x3D;&quot;../../../../assets/icons/shopping-cart-primary.png&quot; /&gt; &lt;b&gt; BUY FOR
+                ${{comics[0].prices[0].price ? comics[0].prices[0].price : &#x27;0&#x27;}}&lt;/b&gt;&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./character.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../../assets/design-system/_main.scss&#x27;;
+.character-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-container {
+    height: 400px;
+    width: 450px;
+    min-height: 400px;
+    min-width: 450px;
+    padding: 20px;
+    border-radius: 5px;
+    background: $color-white;
+    position: relative;
+    .profile-img img {
+        height: 230px;
+        width: 230px;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -48px;
+}
+
+.related-comics {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    h5 {
+        color: gray;
+    }
+    a {
+        color: $color-red;
+        padding-bottom: 10px;
+        ;
+    }
+}
+
+.items-comics {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    a {
+        color: $color-red;
+        padding-bottom: 10px;
+    }
+}
+
+.container {
+    height: 100%;
+}
+
+.column {
+    height: 25%;
+    display: flex;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .column {
+        flex-basis: 50%;
+        height: 50%;
+    }
+}
+
+.column {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.modal-footer {
+    padding: 0 !important;
+}
+
+.modal-footer button {
+    flex: 0 1 50%;
+    max-width: none;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.btn-add {
+    background-color: $default-add-btn;
+    color: $default-add-text;
+}
+
+.btn-add:hover {
+    background-color: $color-brown;
+    color: $color-red;
+}
+
+.btn-buy {
+    background-color: $color-gray;
+    color: $color-red;
+}
+
+.add-img {
+    div {
+        width: 40px;
+        height: 40px;
+        background: url(../../../assets/icons/btn-favourites-default.png) no-repeat;
+    }
+}
+
+.add-img:hover {
+    div {
+        background: url(../../../assets/icons/btn-favourites-primary.png) no-repeat;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="character-card">    <div id="card-container">        <div class="profile-img">            <img src="{{character?.thumbnail.path}}.{{character?.thumbnail.extension}} " alt="{{character.name}}">        </div>        <div class="container">            <div class="column">            </div>            <div class="column">                <div class="description">                    <h5>{{character.name | textLength: 15 | uppercase}}</h5>                    <p>{{ character.description ? (character.description | textLength) : \'No description\'}}</p>                    <a href="{{character.urls[0].url}}" target="_blank" class="btn btn-sm btn-danger">VIEW MORE</a>                </div>            </div>            <div class="column">                <div class="related-comics">                    <h5>Related comics</h5>                    <a href="#" data-toggle="modal" (click)="openModal(character.comics.items[0].resourceURI)" data-target="#modalCharacter">{{ character.comics.items[0] ? (character.comics.items[0]?.name | textLength: 32) : \'\'}}</a>                    <a href="#" data-toggle="modal" (click)="openModal(character.comics.items[1].resourceURI)" data-target="#modalCharacter">{{ character.comics.items[1] ? (character.comics.items[1]?.name | textLength: 32) : \'\'}}</a>                </div>            </div>            <div class="column">                <div class="items-comics">                    <a href="#" data-toggle="modal" (click)="openModal(character.comics.items[2].resourceURI)" data-target="#modalCharacter">{{ character.comics.items[2] ? (character.comics.items[2]?.name | textLength: 32) : \'\'}}</a>                    <a href="#" data-toggle="modal" (click)="openModal(character.comics.items[3].resourceURI)" data-target="#modalCharacter">{{ character.comics.items[3] ? (character.comics.items[3]?.name | textLength: 32) : \'\'}}</a>                </div>            </div>        </div>    </div></div><div *ngIf="showModal" class="modal fade" id="modalCharacter">    <div class="modal-dialog modal-lg">        <div class="modal-content">            <div class="modal-header border-0">                <button type="button" class="close" data-dismiss="modal" aria-label="Close">          <span aria-hidden="true"><img src="../../../assets/icons/btn-close.png" /></span>        </button>            </div>            <div class="modal-body">                <div class="row">                    <div class="col-md-4">                        <img src="{{comics[0].images[0].path}}.{{comics[0].images[0].extension}}" alt="" width="200" class="img-fluid m-x-auto">                    </div>                    <div class="col-md-8">                        <h4>{{comics[0].title ? (comics[0].title | uppercase) : \'TITLE NOT AVAILABLE\'}} </h4>                        <div class="text-justify">                            <p>{{comics[0].description ? (comics[0].description | titlecase) : \'Description not available\'}}</p>                        </div>                    </div>                </div>            </div>            <div class="modal-footer border-0">                <button (mouseout)="changeText(\'ADD TO FAVOURITES\')" (mouseover)="changeText(\'ADDED TO FAVOURITES\')" type="button" class="btn btn-add btn-lg mr-auto d-flex justify-content-center align-items-center add-img"><div class="mr-2"></div><b> {{textButton}}</b></button>                <button type="button" class="btn btn-buy btn-lg" data-dismiss="modal"><img            src="../../../../assets/icons/shopping-cart-primary.png" /> <b> BUY FOR                ${{comics[0].prices[0].price ? comics[0].prices[0].price : \'0\'}}</b></button>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CharacterComponent', 'selector': 'app-character'},{'name': 'CharactersComponent', 'selector': 'app-characters'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CharacterComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CharacterComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

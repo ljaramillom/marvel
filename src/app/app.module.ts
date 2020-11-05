@@ -13,6 +13,9 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CharacterComponent } from './components/character/character.component';
+import { CharacterService } from './services/character/character.service';
+import { ComicService } from './services/comic/comic.service';
+import { FavoriteService } from './services/favorite/favorite.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,11 @@ import { CharacterComponent } from './components/character/character.component';
     NgxPaginationModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CharacterService,
+    ComicService,
+    FavoriteService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
