@@ -8,9 +8,9 @@
             </div>
             <div class="column">
                 <div class="description">
-                    <h5>{{character.name | textLength: 15}}</h5>
+                    <h5>{{character.name | textLength: 15 | uppercase}}</h5>
                     <p>{{ character.description ? (character.description | textLength) : 'No description'}}</p>
-                    <a href="{{character.urls[0].url}}" target="_blank" class="btn btn-sm btn-danger">View more</a>
+                    <a href="{{character.urls[0].url}}" target="_blank" class="btn btn-sm btn-danger">VIEW MORE</a>
                 </div>
             </div>
             <div class="column">
@@ -54,10 +54,10 @@
             </div>
             <div class="modal-footer border-0">
                 <button type="button" class="btn btn-add btn-lg mr-auto"><img
-            src="../../../../assets/icons/btn-favourites-default.png" /> Added to favourites</button>
+            src="../../../../assets/icons/btn-favourites-default.png" /> <b> ADDED TO FAVOURITES</b></button>
                 <button type="button" class="btn btn-buy btn-lg" data-dismiss="modal"><img
-            src="../../../../assets/icons/shopping-cart-primary.png" /> Buy for
-          ${{comics[0].prices[0].price ? comics[0].prices[0].price : '0'}}</button>
+            src="../../../../assets/icons/shopping-cart-primary.png" /> <b> BUY FOR
+                ${{comics[0].prices[0].price ? comics[0].prices[0].price : '0'}}</b></button>
             </div>
         </div>
     </div>

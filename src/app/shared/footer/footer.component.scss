@@ -1,6 +1,7 @@
+@import '../../../assets/design-system/_main.scss';
 footer {
-    background: #2d2727;
-    color: #fff;
+    background: $color-black;
+    color: $color-white;
     bottom: 0px;
     height: 80px;
     width: 100%;

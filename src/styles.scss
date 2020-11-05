@@ -1,14 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-
+@import './assets/design-system/_main.scss';
 .ngx-pagination .current {
-    background: #ec292e !important;
+    background: $color-red !important;
     border: transparent !important;
     border-radius: 20px !important;
 }
 
 .ngx-pagination .current:hover {
     outline: 0;
-    background: #ec292e !important;
+    background: $color-red !important;
     border-radius: 20px !important;
     border: transparent !important;
 }

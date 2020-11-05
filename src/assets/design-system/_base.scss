@@ -1,0 +1,27 @@
+html,
+body {
+    @include fonts($size-16, $font-family-Open-Sans, $font-weight-regular, $color: $color-black);
+    background-color: $color-body;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+
+h2 {
+    @include fonts($size-32, $font-family-Open-Sans, $font-weight-bold);
+}
+
+h3 {
+    @include fonts($size-28, $font-family-Open-Sans, $font-weight-bold);
+}
+
+h4 {
+    @include fonts($size-24, $font-family-Open-Sans, $font-weight-bold);
+}
+
+h5 {
+    @include fonts($size-20, $font-family-Open-Sans, $font-weight-bold);
+}
+
+h6 {
+    @include fonts($size-18, $font-family-Open-Sans, $font-weight-bold);
+}

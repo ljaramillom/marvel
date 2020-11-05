@@ -1,10 +1,11 @@
+@import '../../../assets/design-system/_main.scss';
 .logo img {
     max-width: 100%;
     height: auto;
 }
 
 header {
-    background-color: #2d2727;
+    background-color: $color-black;
 }
 
 .input-group-text {
